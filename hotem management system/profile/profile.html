@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+    <link rel="stylesheet" href="/css/boots.css">
+    <link rel="stylesheet" href="styles profie.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @media print {
+            .no-print {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="text-danger">helo</h1>
+    <nav class="navbar no-print navbar-expand-md fixed-top bg-light shadow-lg navbar-light">
+        <div class="container-fluid ">
+            <img class="no-print" src="https://cdn.pixabay.com/photo/2017/03/16/21/18/logo-2150297_640.png" alt=""
+                width="60" class="rounded-circle">
+            <a href="#" class="navbar-brand text-white mx-4">Home</a>
+            <button class="navbar-toggler " data-bs-toggle="collapse" data-bs-target="#myMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse row" id="myMenu">
+                <ul class="navbar-nav  w-100 justify-content-end flex-row ">
+                    <div class="input-group w-50 col-md-6">
+                        <input type="search" class="form-control search-input" placeholder="search by name or email">
+                        <span class="input-group-text text-white btn btn-success">search</span>
+                    </div>
+                    <button class="btn logout-btn mx-5 fw-bold text-white  btn-success px-4">Logout</button>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br><br><br>
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <div class="col-md-12">
+                <!--nav tab -->
+
+                <ul class="nav no-print nav-tabs">
+                    <li class="nav-item ">
+                        <a href="#booking" class="nav-link active tab-btn" data-bs-toggle="tab">Booking</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#inHouse" class="nav-link  tab-btn" data-bs-toggle="tab">In House</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#archive" class="nav-link   tab-btn " data-bs-toggle="tab"> Archive</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#cashier" class="nav-link   tab-btn cashier-tab" data-bs-toggle="tab">
+                            cashier</a>
+                    </li>
+                </ul>
+
+                <div class="tab-content">
+                    <div class="tab-pane search-tab active  container-fluid mt-3 " id="booking">
+                        <div class="no-print">
+
+
+                            <div class="d-flex  justify-content-between">
+                                <button class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#Registration-modal" id="reg-btn">Register</button>
+                                <button class="btn btn-primary print-btn">Prnit</button>
+                                <button class="btn btn-primary total-data-book">Total booking =</button>
+                            </div>
+                        </div>
+                        <div class="py-5">
+                            <div class="table-responsive">
+
+                                <h1>All Booking Data</h1>
+
+                                <table class="table table-striped table-hover text-center">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="no-print">Sr</th>
+                                            <th scope="col">Location</th>
+                                            <th scope="col">Room no.</th>
+                                            <th scope="col">Full Name</th>
+                                            <th scope="col">Checking date</th>
+                                            <th scope="col">Check out</th>
+                                            <th scope="col">Totol People</th>
+                                            <th>Mobile</th>
+                                            <th>Price</th>
+                                            <th scope="col">Notice</th>
+                                            <th scope="col">Registered At</th>
+                                            <th scope="col">action</th>
+                                        </tr>
+                                    <tbody id="booking-list">
+
+                                    </tbody>
+                                    </thead>
+                                </table>
+                            </div>
+                            <div class="row py-5 show-booking-rooms">
+                                
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="tab-pane search-tab  container-fluid mt-3 " id="inHouse">
+                        <div class="no-print">
+                            <div class="d-flex justify-content-between">
+                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#inHouse-modal"
+                                    id="inHousebtn">Register</button>
+                                <button class="btn btn-primary print-btn">Prnit</button>
+                                <button class="btn btn-primary total-data-book">Total booking =</button>
+                            </div>
+                        </div>
+                        <div class="py-5">
+                            <div class="table-responsive">
+                                <h1>All In HOuse Data</h1>
+
+                                <table class="table table-striped table-hover text-center">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="no-print">Sr</th>
+                                            <th scope="col">Location</th>
+                                            <th scope="col">Room no.</th>
+                                            <th scope="col">Full Name</th>
+                                            <th scope="col">Checking date</th>
+                                            <th scope="col">Check out</th>
+                                            <th scope="col">Totol People</th>
+                                            <th>Mobile</th>
+                                            <th>Price</th>
+                                            <th scope="col">Notice</th>
+                                            <th scope="col">Registered At</th>
+                                            <th scope="col">action</th>
+                                        </tr>
+                                    <tbody id="inHouse-list">
+
+                                    </tbody>
+                                    </thead>
+                                </table>
+                            </div>
+                            <div class="row py-5 show-inHouse-rooms">
+                              
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="tab-pane search-tab containerflu mt-3 " id="archive">
+                        <div class="no-print">
+                            <div class="d-flex gap-4">
+                                <button class="btn btn-primary print-btn">Prnit</button>
+                                <button class="btn btn-primary total-data-book">Total Archive =</button>
+                            </div>
+                        </div>
+                        <div class="py-5">
+                            <div class="table-responsive">
+                                <h1>All Archive Data</h1>
+
+                                <table class="table table-striped table-hover text-center">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="no-print">Sr</th>
+                                            <th scope="col">Location</th>
+                                            <th scope="col">Room no.</th>
+                                            <th scope="col">Full Name</th>
+                                            <th scope="col">Checking date</th>
+                                            <th scope="col">Check out</th>
+                                            <th scope="col">Totol People</th>
+                                            <th>Mobile</th>
+                                            <th>Price</th>
+                                            <th scope="col">Notice</th>
+                                            <th scope="col">Registered At</th>
+                                            <th scope="col">action</th>
+                                        </tr>
+                                    <tbody id="archive-list">
+
+                                    </tbody>
+                                    </thead>
+                                </table>
+                            </div>
+                            
+                        </div>
+
+                    </div>
+                    <div class="tab-pane container-fluid   mt-3 " id="cashier">
+
+                        <div class="py-5">
+                            <div class="table-responsive">
+                                <h1>All cashier Data</h1>
+
+                                <table class="table table-striped table-hover text-center">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="no-print">Sr</th>
+                                            <th scope="col">Room no.</th>
+                                            <th scope="col">cashier</th>
+                                            <th scope="col">Date/Time</th>
+                                            <th scope="col">Amount</th>
+
+                                        </tr>
+                                    <tbody id="cashier-list">
+
+                                    </tbody>
+                                    </thead>
+                                </table>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <h1>Total</h1>
+                                <h1 class="total">6000</h1>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <button class="btn btn-primary addcash " data-bs-toggle="modal"
+                                        data-bs-target="#cashier-modal">Add Cash</button>
+                                </div>
+                                <div class="col-md-3">
+
+                                    <button class="btn btn-primary close-cashier-btn">Close Cashier</button>
+
+                                </div>
+                                <div class="col-md-3">
+                                    <button id="archivebtn" data-bs-toggle="modal" data-bs-target="#cashier-arch-modal"
+                                        class="btn btn-success">Archive Cashier</button>
+
+                                </div>
+                                <div class="col-md-3">
+                                    <button class="btn btn-primary print-btn">Prnit</button>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <!-- models coding start -->
+    <div class="modal animate__animated animate__zoomIn" id="Registration-modal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1>Registration Form</h1>
+                    <button type="button" class="btn-close " id="cbtn" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="booking-form">
+                        <input type="text" name="Location" class="form-control mb-3" placeholder="Location">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" name="roomNo" class="form-control mb-3" placeholder="Room no.">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" name="people" class="form-control mb-3" placeholder="pax">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" name="Name" class="form-control mb-3" placeholder="Name">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" name="Surname" class="form-control mb-3" placeholder="Surname">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="In"> Chekin date</label>
+                                <input type="date" name="Chekin" class="form-control mb-3" placeholder="Chekin "
+                                    id="In">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="out"> chek out date</label>
+
+                                <input type="date" name="checkOut" class="form-control mb-3" placeholder="checkin date"
+                                    id="out">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="">Price</label>
+                                <input type="text" name="price" class="form-control mb-3" placeholder="price">
+                            </div>
+                            <div class="col-md-6">
+                                <label for=""> mobile</label>
+                                <input type="tel" name="mobile" class="form-control mb-3" placeholder="mobile No.">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="">notice</label>
+                            <textarea name="" id="" name="textAera" class="form-control"></textarea>
+                        </div>
+                        <div class="row mb-3 my-2">
+                            <button type="submit" class="btn btn-primary fw-bold">
+                                Registered
+                            </button>
+                            <button type="button" class="btn btn-primary bg-danger my-1 d-none fw-bold">
+                                Update
+                            </button>
+                        </div>
+
+
+                    </form>
+
+                </div>
+                <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div> -->
+            </div>
+        </div>
+
+    </div>
+    <div class="modal animate__animated animate__zoomIn" id="inHouse-modal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1>In House Form</h1>
+                    <button type="button" class="btn-close " id="cbtnHouse" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="inHouse-form">
+                        <input type="text" name="Location" class="form-control mb-3" placeholder="Location inhose">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" name="roomNo" class="form-control mb-3" placeholder="Room no.">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" name="people" class="form-control mb-3" placeholder="pax">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" name="Name" class="form-control mb-3" placeholder="Name">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" name="Surname" class="form-control mb-3" placeholder="Surname">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="In"> Chekin date</label>
+                                <input type="date" name="Chekin" class="form-control mb-3" placeholder="Chekin "
+                                    id="In">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="out"> chek out date</label>
+
+                                <input type="date" name="checkOut" class="form-control mb-3" placeholder="checkin date"
+                                    id="out">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="">Price</label>
+                                <input type="text" name="price" class="form-control mb-3" placeholder="price">
+                            </div>
+                            <div class="col-md-6">
+                                <label for=""> Notice</label>
+                                <input type="tel" name="mobile" class="form-control mb-3" placeholder="mobile No.">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+
+                            <textarea name="" id="" name="textAera" class="form-control"></textarea>
+                        </div>
+                        <div class="row mb-3 my-2">
+                            <button type="submit" class="btn btn-primary fw-bold">
+                                Registered
+                            </button>
+                            <button type="button" class="btn btn-primary bg-danger my-1 d-none fw-bold">
+                                Update
+                            </button>
+                        </div>
+
+
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="modal animate__animated animate__zoomIn" id="cashier-modal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1>In Cashier Form</h1>
+                    <button type="button" class="btn-close " id="cbtnc" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="cashier-form">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" name="cashiername" readonly class="form-control mb-3"
+                                    placeholder="cashier-name">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" name="roomNo" class="form-control mb-3" placeholder="Room no.">
+
+                            </div>
+                            <input type="number" name="Amount" class="form-control mb-3" placeholder="Enter amount">
+                        </div>
+                        <div class="row mb-3 my-2">
+                            <button type="submit" class="btn btn-primary fw-bold">
+                                Add Cashier
+                            </button>
+
+                            <button type="button" class="btn btn-primary bg-danger my-1 d-none fw-bold">
+                                Update
+                            </button>
+                        </div>
+
+
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="modal animate__animated animate__zoomIn" id="cashier-arch-modal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1>Archive Cashier</h1>
+                    <button class="print-btn btn  btn-primary mx-5 ">print</button>
+                    <button type="button" class="btn-close " id="cbtnc" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="table-responsive">
+
+                        <table class="table table-striped table-hover text-center">
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="no-print">Sr</th>
+                                    <!-- <th scope="col">Room no.</th> -->
+                                    <th scope="col">cashier</th>
+                                    <th scope="col">Date/Time</th>
+                                    <th scope="col">Amount</th>
+
+                                </tr>
+                            <tbody id="cashier-arch-list">
+
+                            </tbody>
+                            </thead>
+                        </table>
+
+                        <div class="d-flex justify-content-between">
+                            <h1>Total</h1>
+                            <h1 class="total-arch">6000</h1>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="text-center text-lg-start bg-body-tertiary text-muted">
+        <!-- Section: Social media -->
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+            <!-- Left -->
+            <div class="me-5 d-none d-lg-block">
+                <span>Get connected with us on social networks:</span>
+            </div>
+            <!-- Left -->
+
+            <!-- Right -->
+            <div>
+                <a href="" class="me-4 text-reset">
+                    <!-- <i class="fab fa-facebook-f"></i> -->
+                </a>
+
+                <a href="mailto:vipgurjar60@gmail.com" class="me-4 text-reset">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <!-- <a href="" class="me-4 text-reset">
+                  <i class="fab fa-google"></i> 
+                </a>           -->
+                <a href="https://www.instagram.com/" class="me-4 text-reset">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Links  -->
+        <section class="vaibhav">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            <i class="fas fa-gem me-3"></i>Vipin Chhoker
+                        </h6>
+                        <p>
+
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Products
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Angular</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">React</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Vue</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Laravel</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Useful links
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Pricing</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Settings</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Orders</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Help</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                        <p><i class="fas fa-home me-3"></i> City Meerut (uttarpardesh) Vill:- Nangla rathi 250223
+                        </p>
+                        <p>
+                            <i class="fas fa-envelope me-3"></i>
+                            vipgurjar60@gmail.com
+                        </p>
+                        <p><i class="fas fa-phone me-3"></i> +91 9927098979</p>
+                        <!-- <p><i class="fas fa-print me-3"></i> </p> -->
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+
+        <!-- Copyright -->
+    </footer>
+
+
+
+    <!-- models coding END -->
+
+
+
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="/script/boots.js"></script>
+    <script src="script pofile.js"></script>
+
+</body>
+
+</html>
