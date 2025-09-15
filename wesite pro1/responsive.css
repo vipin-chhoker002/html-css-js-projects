@@ -1,0 +1,106 @@
+@media(max-width:488px){
+    .main-navigation ul{
+        position: absolute;
+        left: 300px;
+        top: 80px;
+        width: 150px;
+        height: 100vh;
+        display: none;
+        transition: 0.5s ease-in;
+        background-color: #ac2626;
+    }
+    .main-navigation ul li{
+        display: block;
+        margin-left: 0;
+       
+    }
+    .main-navigation ul li a{
+        color: white;
+    }
+    .bars{
+        top: 30px;
+        left: 400px;
+        z-index: 4000;
+        position: fixed;
+    }
+    .contact{
+        flex-direction: column;
+    }
+    .contact-h ul li {
+        font-size: 0.5em !important;
+    }
+    .contact-h p{
+        font-size: 0.5em !important;
+    }
+    .contact-h{
+        gap: 20px;
+    }
+    .contact-h span{
+        font-size: 1em !important;
+    }
+    .contact-h .Skyrocket{
+        margin-top: px;
+        /* margin-bottom: 20px; */
+        width: 50%;
+        font-size: 1em !important;
+    }
+    .box form .inputbox {
+        position: relative;
+        width: 350px;
+        margin-top: 30px;
+    
+    }
+    .inputbox textarea {
+        width: 350px;
+        position: relative;
+        top: 5px;
+        border: none;
+        border-bottom: 2px solid #ac2626;
+        margin-top: 4px;
+        z-index: 4544;
+        outline: none;
+        margin-top: 40px;
+    }
+
+    .footer-headin p{
+        font-size: 1em;
+    }
+    .footer-img p {
+        font-size: 1em !important;
+    }
+   .footer-img #curious{
+        font-size: 1.5em !important;
+    }
+   .footer-img {
+    margin-bottom: 0;
+    background-repeat: no-repeat;
+   }
+   .footer-img  #footer-button{
+    position: absolute;
+    top: -50;
+    left: 0;
+    margin-bottom: 0px;
+    /* width: 100px !important; */
+   }
+   .details-footer{
+    flex-direction: column;
+    margin-top: 20px;
+   }
+   .f-para{
+    width: 350px;
+    font-size: 0.5em !important;
+    margin-top: 0px !important;
+   }
+   .footer-nav{
+    margin-left: 0px;
+   }
+   .footer-nav ul li  a{
+    font-size: 0.8em;
+   }
+   .footer-nav .f-img a i {
+    font-size: 0.4em;
+   }
+   .f-img{
+    width: 350px !important;
+   }
+}

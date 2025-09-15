@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive FAQ Slider with Dropdown</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+        }
+
+        .faq-container {
+            max-width: 600px;
+            margin: 50px auto;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .faq-question h2 {
+            margin: 0;
+            padding: 15px;
+            flex: 1;
+            cursor: pointer;
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 15px;
+            background-color: #f9f9f9;
+        }
+
+        .faq-btn {
+            cursor: pointer;
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 0 8px 8px 0;
+            font-size: 16px;
+        }
+    </style>
+</head> 
+<body>
+
+<div class="faq-container">
+    <div class="faq-question" onclick="toggleAnswer(1)">
+        <h2>Question 1</h2>
+        <button class="faq-btn">+</button>
+    </div>
+    <div class="faq-answer">
+        <p>Answer to question 1 goes here.</p>
+    </div>
+
+    <div class="faq-question" onclick="toggleAnswer(2)">
+        <h2>Question 2</h2>
+        <button class="faq-btn">+</button>
+    </div>
+    <div class="faq-answer">
+        <p>Answer to question 2 goes here.</p>
+    </div>
+
+    <div class="faq-question" onclick="toggleAnswer(3)">
+        <h2>Question 3</h2>
+        <button class="faq-btn">+</button>
+    </div>
+    <div class="faq-answer">
+        <p>Answer to question 3 goes here.</p>
+    </div>
+</div>
+
+<script>
+    function toggleAnswer(index) {
+        const faqAnswer = document.querySelectorAll('.faq-answer')[index - 1];
+        faqAnswer.style.display = (faqAnswer.style.display === 'block') ? 'none' : 'block';
+    }
+</script>
+
+</body>
+</html>

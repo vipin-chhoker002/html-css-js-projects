@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <input type="number" value="2500" class="numbertype">
+        <input type="number" value="8500" class="numbertype1">
+    </div>
+    <div class="range-slider">
+        <input type="range" value="2500" min="0" max="10000" step="1" class="rangetype">
+        <input type="range" value="8500" min="0" max="10000" step="1" class="rangetype1">
+
+    </div>
+
+    <script>
+
+        let numberInput = document.querySelectorAll(".container input");
+        let rangeinput = document.querySelectorAll(".range-slider input")
+        let pricegap = 500;
+        numberInput.forEach((numbertyp) => {
+            numbertyp.addEventListener("input", function (e) {
+                let styles = e.currentTarget.classList;
+
+                let minp = +numberInput[0].value;
+                let maxp = +numberInput[1].value;
+                let diff = maxp - minp;
+                rangeinput[0].value = minp;
+                rangeinput[1].value = maxp;
+
+                if (diff < pricegap) {
+                    if (styles.contains('numbertype')) {
+                        rangeinput[0].value = (minp - pricegap) + diff;
+                        numberInput[0].value = (minp - pricegap) + diff;
+
+                        console.log("yes")
+
+                    } else if (styles.contains('numbertype1')) {
+                        numberInput[1].value = (minp + pricegap);
+                    }
+
+                } else if (maxp < pricegap) {
+                    numberInput[0].value = 0;
+                    numberInput[1].value = 500;
+                }
+
+            })
+
+            rangeinput.forEach((value) => {
+                value.addEventListener("input", function (e) {
+                    let rmin = +rangeinput[0].value;
+                    let rmax = +rangeinput[1].value;
+                    numberInput[0].value = rmin;
+                    numberInput[1].value = rmax;
+                    let diff = rmax - rmin;
+                    let styles = e.currentTarget.classList;
+
+
+                })
+
+            })
+
+        });
+
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        let arry = [+prompt(), +prompt(), +prompt(), +prompt(), +prompt(), +prompt()]
+        let first = 0;
+        let second = 0;
+        let third = 0;
+        // this program find the greatest number in aaray 
+        for (i = 0; i <= arry.length - 1; i++) {
+            if (arry[i] > first) {
+                third = second;
+                second = first;
+                first = arry[i];
+
+            }
+
+            else if (arry[i] > second) {
+                third = second;
+                second = arry[i];
+
+
+
+            } else if (arry[i] > third) {
+                third = arry[i];
+            }
+
+            console.log(arry[i]);
+        };
+
+
+        console.log(first + " first greater number")
+        console.log(second + " second greater  number")
+        console.log(third + " this is third largest number")
+        // console.log(fourth + "this is fourth largest number")
+
+        function findThirdGreatestNumber(arr) {
+            if (arr.length < 3) {
+                return "Array must have at least three elements";
+            }
+
+            let first = 0;
+            let second = 0;
+            let third = 0;
+
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] > first) {
+                    third = second;
+                    second = first;
+                    first = arr[i];
+                } else if (arr[i] > second) {
+                    third = second;
+                    second = arr[i];
+                } else if (arr[i] > third) {
+                    third = arr[i];
+                }
+            }
+
+            return third;
+        }
+
+        // Example usage:
+        const numbers = [5, 8, 2, 10, 7, 1];
+        const thirdGreatest = findThirdGreatestNumber(numbers);
+        console.log("Third greatest number:", thirdGreatest);
+
+    </script>
+
+</body>
+
+</html>

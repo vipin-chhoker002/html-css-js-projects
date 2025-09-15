@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border: 2px solid black;
+            width: 500px;
+            height: 500px;
+            margin: auto;
+        }
+
+        th {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+
+
+        let arr = [
+            [45, 25, 36, 96],
+            [85, 96, 45, 25],
+            [45, 15, 26, 48],
+            [85, 25, 15, 35]
+        ]
+
+        let save = 0;
+        let col = 0;
+        let sum = 0;
+        let arr1 = []
+        document.write("<table>");
+        for (i = 0; i < arr.length; i++) {
+            document.write("<tr>");
+            for (j = 0; j < arr.length; j++) {
+                document.write("<th>" + arr[i][j])
+                document.write("</th>")
+                sum += arr[i][j];
+                col += arr[j][i];
+            }
+            document.write("<th>" + sum + "</th>")
+            document.write("</tr>");
+            save+=sum;
+            sum = 0;
+            arr1.push(col);
+            document.write("<tr>");
+            if (i >= arr.length -1) {
+                for (a = 0; a < arr1.length; a++) {
+                    document.write("<th>" + arr1[a])
+                    document.write("</th>")
+                }
+                document.write("<th>"+save+"</th>")
+            }
+            document.write("</tr>")
+            col = 0;
+
+
+        }
+
+
+        document.write("</table>")
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

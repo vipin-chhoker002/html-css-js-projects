@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="web.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;1,400&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+</head>
+
+<body>
+    <!-- <button onclick="demo()"> show hide</button> -->
+    <section class="header">
+        <nav>
+            <img src="logo school.jpg" alt="Not found" width="100PX"  onclick="ritik()" ondblclick="demo()">
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-window-close" onclick="hidemenu()"></i>
+                <!-- <marquee behavior="alternate" direction="right" truespeed="12s"> -->
+                <ul>
+                    <li> <a href="https://www.youtube.com/">HOME</a></li>
+                    <li> <a href="#in">ABOUT</a></li>
+                    <li> <a href="">COURSE</a></li>
+                    <li> <a href="">BOLG</a></li>
+                    <li> <a href="">CONTACT</a></li>
+                </ul>
+            <!-- </marquee> -->
+            </div>
+            <i class="fa fa-home" onclick="showmenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1>World's Biggest Univercity</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Quasi, labore quo iste vel error ut
+                placeat.
+                Expedita tempora earum vitae?</p>
+            <a href="#" class="hero-btn"> Visit to more information</a>
+        </div>
+    </section>
+    <!-- COURSE -->
+    <section class="course" id="in">
+        <h1>Course we offer</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, facere!</p>
+        <div class="row">
+            <div class="course-col">
+                <h3>Intermedate</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat dolores enim fuga. Nemo non
+                    exercitationem nam enim porro ea ipsa culpa repellendus voluptate, doloremque ut.</p>
+
+            </div>
+            <div class="course-col">
+                <h3>Degree</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat dolores enim fuga. Nemo non
+                    exercitationem nam enim porro ea ipsa culpa repellendus voluptate, doloremque ut.</p>
+
+            </div>
+            <div class="course-col">
+                <h3>post gradution</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat dolores enim fuga. Nemo non
+                    exercitationem nam enim porro ea ipsa culpa repellendus voluptate, doloremque ut.</p>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- this is campus section part -->
+    <section class="campus">
+        <h1>Our Global Compus</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto, eos necessitatibus ratione esse porro,
+            officiis fugiat </p>
+        <div class="row">
+            <div class="compus-col">
+                <img src="compus.jpg" alt="notfound" width="100%" id="img">
+                <div class="layer">
+                    <h3>LONDON </h3>
+                </div>
+            </div>
+            <div class="compus-col">
+                <img src="compus3.jpg" alt="notfound" width="100%" id="img">
+                <div class="layer">
+                    <h3>NEW YORK </h3>
+                </div>
+            </div>
+            <div class="compus-col">
+                <img src="compus2.jpg" alt="notfound" width="100%">
+                <div class="layer">
+                    <h3>WASINGTON </h3>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+
+    </section>
+    <!-- facilites section  -->
+    <section class="facilites">
+        <h1> Our facilites</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum deserunt, tempore quam, commodi dolore velit
+            officiis.</p>
+        <div class="row">
+            <div class="facilites-col">
+                <img src="facilites.jpg" alt="notfound">
+                <h3>Wolrd Class libary</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt labore neque accusantium aperiam
+                    perspiciatis odit provident quas minima cupiditate eveniet dolores natus,</p>
+            </div>
+
+            <div class="facilites-col">
+                <img src="facilites1.jpg" alt="notfound" id="img2">
+                <h3>Wolrd Class libary</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt labore neque accusantium aperiam
+                    perspiciatis odit provident quas minima cupiditate eveniet dolores natus,</p>
+            </div>
+
+
+            <div class="facilites-col">
+                <img src="facilites2.jpg" alt="notfound">
+                <h3>Wolrd Class libary</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt labore neque accusantium aperiam
+                    perspiciatis odit provident quas minima cupiditate eveniet dolores natus,</p>
+            </div>
+
+
+        </div>
+    </section>
+    <div class="table">
+        <form action="#">
+            <h1> Registration from</h1>
+            <label for="text">Name:</label>
+            <input type="text" placeholder="Enter your name" id="text">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="***@gmail.com">
+            <label for="password">password:</label>
+            <input type="password" name="passpword" id="passpword" placeholder="Enter your passpword">
+            <label for="number">Mobile no:</label></td>
+            <input type="mobile" name="number" id="number">
+        </form>
+    </div>
+    <script>
+        function ritik()
+    
+        {
+
+            document.getElementById("navLinks").style.display="none"
+        }
+       
+        var navLinks = document.getElementById("navLinks")
+        function showmenu  () {
+            navLinks.style.right = "0";
+        }
+        function hidemenu() {
+            navLinks.style.right = "-200px";
+        }
+        document.getElementById("navLinks").style.marginRight="";
+        $("#navLinks ul li a").css({"background-color": "yellow"});      
+        function demo(){
+        //  let a =document.getElementById("navLinks");
+         if(document.getElementById("navLinks").style.display==="none")
+         {
+            document.getElementById("navLinks").style.display="block";
+         }
+         else{
+            document.getElementById("navLinks").style.display="none"
+         }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#passage {
+    font-size: 1.2em;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: left;
+    border: 1px solid black;
+    margin-bottom: 20px;
+}
+
+#userInput {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 1em;
+}
+
+#result {
+    margin-top: 20px;
+    font-weight: bold;
+}

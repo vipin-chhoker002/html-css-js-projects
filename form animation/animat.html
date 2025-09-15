@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="animate.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login form</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <form action="" class="form" onsubmit="return saveform()" name="myform">
+            <h1 class="tittle">Login</h1>
+            <div class="inp">
+                <input type="text" id="" class="input" name="text" placeholder="username">
+                <span class="error"></span>
+            </div>
+            <div class="inp">
+                <input type="password" id="" class="input" name="pass" placeholder="password">
+            </div>
+            <button class="submit">Login</button>
+            <p class="footer">don't have accounta ? <a href="" class="link">sign up</a></p>
+        </form>
+        <div class="banner">
+            <h1 class="wel_text">WELCOME</h1>
+            <p class="para">please sing here <br>real info---</p>
+        </div>
+    </div>
+    <script>
+        
+        function saveform() {
+            let name = document.forms["myform"]["text"].value;
+            if (name.length < 3) {
+                alert("name is to short")
+                return  false;
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

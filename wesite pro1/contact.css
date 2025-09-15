@@ -1,0 +1,393 @@
+.contact {
+    display: flex;
+    position: relative;
+    margin-top: 150px;
+    margin-left: 40px;
+    margin-left: 40px;
+
+}
+
+.contact-h {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    margin-left: 40px;
+    flex-direction: column;
+    font-size: 2em;
+}
+.Skyrocket{
+    padding: 2px;
+    width:auto;
+    color: white;
+    border-radius: 20px;
+    margin-right: 250px;
+    background-color:#ac2626;
+}
+.contact-h ul{list-style: none;}
+.contact-h span {
+    margin-top: -20px;
+    font-size: 2.5em;
+    font-family: sans-serif;
+    font-weight: 700;
+}
+
+.box {
+    margin-right: 50px;
+}
+
+/*input box section*/
+.box form .inputbox {
+    position: relative;
+    width: 700px;
+    margin-top: 30px;
+
+}
+
+.box form .inputbox input {
+    width: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: relative;
+    padding: 15px 10px 10px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    color: black;
+    font-size: 1em;
+    z-index: 10;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+
+.box form .inputbox span {
+    position: absolute;
+    left: 0;
+    top: -20px;
+    z-index: 455;
+    padding: 15px 0px 15px;
+    pointer-events: none;
+    font-weight: 700;
+    color: #8f8f8f;
+    font-size: 1em !important;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+/* .box form .inputbox input:valid~span, */
+.box form .inputbox input:focus~span {
+    color: #000000;
+    top: -5px;
+    font-size: 0.9em !important;
+    transform: translateY(-34px);
+}
+
+.box form .inputbox i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px !important;
+    background: #ac2626;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: 0.5s;
+    pointer-events: none;
+}
+/* .box form .inputbox input:valid~i, */
+.box form .inputbox input:focus~i {
+    height: 44px !important;
+}
+
+.box form .link {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.box form .link a {
+    margin: 10px 0px;
+    font-size: 0.75em;
+    color: #8f8f8f;
+    text-decoration: none;
+}
+
+.box form .link a:hover,
+.box form .link a:nth-child(3) {
+    color: #ffff;
+}
+.box form input[type="submit"]:active {
+    opacity: 0.8;
+}
+
+.inputbox textarea {
+    width: 700px;
+    position: relative;
+    top: 5px;
+    border: none;
+    border-bottom: 2px solid #ac2626;
+    margin-top: 4px;
+    z-index: 4544;
+    outline: none;
+    margin-top: 40px;
+}
+.button-s{
+    width: 100%;
+}
+.button-s input[type="submit"]{
+    margin-top: 40px;
+    color: white;
+    font-weight: 600;
+    border-radius: 20px;
+    border: 1px solid black;
+    font-size: 2em !important;
+    background-color: #ac2626;
+
+    width: 100%;
+}
+.box form #text span{
+    margin-top: 30px;
+}
+
+/* .box form .inputbox textarea:focus~i {
+    height: 50px !important;
+} */
+.box form .inputbox textarea:focus~span{
+    margin-top: 10px;
+    transform: translateY(-20px) !important;
+}
+/* footer section*/
+.footer {
+    margin-left: 40px;
+    margin-right: 40px;
+    /* height: 100vh; */
+    width: 95%;
+    background-color: #f1f1f1d0;
+}
+
+.footer-img {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 100px;
+    background: url(2.png);
+    background-size: contain;
+    border-radius: 12px;
+    margin: auto;
+    height: 400px;
+    width: 80%;
+}
+
+.footer-img .footer-heading {
+    position: relative;
+    margin-left: 40px;
+    top: -100;
+}
+
+#footer-button {
+    position: relative;
+    margin-top: 250px;
+    margin-right: 200px;
+}
+
+/* footer details */
+.details-footer {
+    margin-top: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-nav ul li {
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.footer-nav ul li a {
+    position: relative;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+    font-size: 1.5em;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: 2s;
+    font-weight: 400;
+    color: black;
+}
+
+.footer-nav ul li a::after {
+    content: '';
+    /* position: relative; */
+    width: 0%;
+    height: 2px;
+    background: #F16232;
+    display: block;
+    margin: auto;
+    transition: .3s;
+}
+
+.footer-nav ul li a:hover::after {
+    width: 100%;
+}
+
+.f-privcay {
+    margin-right: 20px;
+    margin-top: 200px;
+}
+
+.f-privcay a button {
+    box-shadow: inset 2px 2px 12px #1c1a1a;
+    font-weight: 700;
+}
+.bars{
+    display: none;
+}
+
+.f-details {
+    padding: 10px 10px;
+    /* background-color: #b5b5b5; */
+    margin-left: 20px;
+    border-radius: 20px;
+}
+
+.f-details a {
+    text-decoration: none;
+}
+
+.f-para {
+    margin-top: 30px;
+    width: 440px;
+}
+
+.f-img {
+    margin-left: 60px;
+    gap: 70px;
+    display: flex;
+}
+
+#go-top {
+    width: 150px;
+    padding: 10px 10px;
+    border-radius: 20px;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid black;
+    transition: 0.5s ease;
+}
+
+#go-top:hover {
+    background-color: #F16232;
+}
+/* responsive section*/
+@media(max-width:488px){
+    .main-navigation ul{
+        position: absolute;
+        left: 300px;
+        top: 80px;
+        width: 150px;
+        height: 100vh;
+        display: none;
+        transition: 0.5s ease-in;
+        background-color: #ac2626;
+    }
+    .main-navigation ul li{
+        display: block;
+        margin-left: 0;
+       
+    }
+    .main-navigation ul li a{
+        color: white;
+    }
+    .bars{
+        display: block !important;
+        top: 30px;
+        left: 400px;
+        z-index: 4000;
+        position: fixed;
+    }
+    .contact{
+        flex-direction: column;
+    }
+    .contact-h ul li {
+        font-size: 0.5em !important;
+    }
+    .contact-h p{
+        font-size: 0.5em !important;
+    }
+    .contact-h{
+        gap: 20px;
+    }
+    .contact-h span{
+        font-size: 1em !important;
+    }
+    .contact-h .Skyrocket{
+        margin-top: px;
+        /* margin-bottom: 20px; */
+        width: 50%;
+        font-size: 1em !important;
+    }
+    .box form .inputbox {
+        position: relative;
+        width: 350px;
+        margin-top: 30px;
+    
+    }
+    .inputbox textarea {
+        width: 350px;
+        position: relative;
+        top: 5px;
+        border: none;
+        border-bottom: 2px solid #ac2626;
+        margin-top: 4px;
+        z-index: 4544;
+        outline: none;
+        margin-top: 40px;
+    }
+
+    .footer-headin p{
+        font-size: 1em;
+    }
+    .footer-img p {
+        font-size: 1em !important;
+    }
+   .footer-img #curious{
+        font-size: 1.5em !important;
+    }
+   .footer-img {
+    margin-bottom: 0;
+    background-repeat: no-repeat;
+   }
+   .footer-img  #footer-button{
+    position: absolute;
+    top: -50;
+    left: 0;
+    margin-bottom: 0px;
+    /* width: 100px !important; */
+   }
+   .details-footer{
+    flex-direction: column;
+    margin-top: 20px;
+   }
+   .f-para{
+    width: 350px;
+    font-size: 0.5em !important;
+    margin-top: 0px !important;
+   }
+   .footer-nav{
+    margin-left: 0px;
+   }
+   .footer-nav ul li  a{
+    font-size: 0.8em;
+   }
+   .footer-nav .f-img a i {
+    font-size: 0.4em;
+   }
+   .f-img{
+    gap: 20px;
+    width: 350px !important;
+   }
+   .footer{
+    overflow: hidden;
+    width: 380px;
+   }
+   .f-privcay{
+    margin-top: 40px;
+   }
+}

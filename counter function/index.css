@@ -1,0 +1,21 @@
+.container{
+    font-family: 'popins' sans-serif 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+    margin:120px auto;
+    width: 800px;
+    height: 500px;
+    justify-content: space-around;
+    border:2px solid red;
+  
+}
+.container span{
+    font-size: 2em;
+}
+.btn{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}

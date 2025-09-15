@@ -1,0 +1,42 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    overflow: hidden;
+}
+
+.sprial {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    position: absolute;
+}
+
+@property --angle {
+    syntax:'<angle>';
+    initial-value: 0deg;
+    inherits: false;
+
+}
+
+@keyframes sprial {
+    0% {
+        --angle: 0deg;
+
+    }
+
+    100% {
+        --angle: 360deg;
+    }
+}
+
+.character {
+    color: white;
+    font-size: 2em;
+    transform: translateY(calc(sin(var(--angle)) * 100px)) scale(calc(cos(var(--angle)) * 0.5 + 0.5));
+    animation: sprial 4s infinite;
+}
