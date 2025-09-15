@@ -1,0 +1,211 @@
+
+.sub-tittle {
+    text-align: center;
+    font-size: 60px;
+    padding: 30px 0 70px;
+}
+
+.sub-tittle span {
+    color: aqua;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+#heading {
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 50px;
+}
+
+.bar {
+    font-size: 2.1em;
+}
+.technical-bars{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.technical-bars .bar {
+ 
+    width: 400px;
+}
+
+.technical-bars .bar:first-child {
+    margin-top: 0;
+}
+
+.technical-bars .bar:last-child {
+    margin: 0;
+}
+
+.technical-bars .bar .info {
+    margin-bottom: 5px;
+}
+
+.technical-bars .bar .info span {
+    font-size: 17px;
+    font-weight: 700;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+
+}
+
+.technical-bars .bar .progress-line {
+    position: relative;
+    border-radius: 10px;
+    height: 5px;
+    width: 100%;
+    background: rgb(0, 229, 255);
+    transform: scale(0);
+    transform-origin: left;
+    animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+
+}
+
+.technical-bars .bar .progress-line span {
+    height: 100%;
+    border-radius: 10px;
+    position: absolute;
+    background-color: rgb(191, 90, 8);
+    animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    transform: scale(0);
+    transform-origin: left;
+}
+
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+
+
+}
+
+.progress-line.html span {
+    width: 90%;
+}
+
+.progress-line.css span {
+    width: 80%;
+}
+
+.progress-line.js span {
+    width: 85%;
+}
+
+.progress-line.py span {
+    width: 75%;
+}
+
+.progress-line.re span {
+    width: 80%;
+}
+.progress-line.ex span {
+    width: 95%;
+}
+.progress-line.office span {
+    width: 95%;
+}
+.progress-line.ty span {
+    width: 80%;
+}
+.progress-line.wps span {
+    width: 80%;
+}
+.progress-line.photo span {
+    width: 80%;
+}
+.progress-line.illu span {
+    width: 80%;
+}
+.progress-line.canva span {
+    width: 80%;
+}
+
+.progress-line span:after {
+    position: absolute;
+    padding: 1px 7px;
+    background: #000;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 3px;
+    top: -28px;
+    right: -20px;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+
+}
+
+.progress-line.html span::after {
+
+    content: "90%";
+}
+
+.progress-line.css span::after {
+
+    content: "80%";
+}
+
+.progress-line.js span::after {
+
+    content: "85%";
+}
+.progress-line.office span::after {
+
+    content: "90%";
+}
+
+.progress-line.py span::after {
+    content: "75%";
+}
+
+.progress-line.re span::after {
+    content: "80%";
+}
+.progress-line.ex span::after {
+    content: "90%";
+}
+.progress-line.ty span::after {
+    content: "Good";
+}
+.progress-line.wps span::after {
+    content: "40%";
+}
+.progress-line.photo span::after {
+    content: "Pro";
+}
+.progress-line.canva span::after {
+    content: "Good";
+}
+.progress-line.illu span::after {
+    content: "pro";
+}
+
+@keyframes showText {
+    100% {
+        opacity: 1;
+    }
+}
+
+.progress-line span::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: black;
+    top: -10px;
+    right: 0;
+    opacity: 0;
+    animation: showText 0.5s 1s linear forwards;
+}
+

@@ -1,0 +1,67 @@
+.projectDiv {
+    position: relative;
+    margin-top: 100px;
+}
+
+.mainContent {
+    background: #00466b ;
+    overflow: hidden;
+    color: #052130;
+    /* color: orangered; */
+    position: relative;
+    border-radius: 12px;
+    min-width: 230px;
+    text-align: center;
+    
+}
+
+
+.mainContent img {
+    margin-top: 5px;
+  
+    height: 200px;
+    width: 100%;
+    aspect-ratio: 2/3;
+    object-fit: contain;
+    
+}
+
+.hoverDiv {
+    font-family: "Roboto", sans-serif !important;
+    font-weight: 500;
+    font-size: 2.2vmin !important;
+    transition: all 0.5s;
+    position: absolute;
+    top: 300px;
+    
+    background: #006ca63c ;
+    backdrop-filter: blur(40px);
+    left: -16px;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    text-align: center;
+    padding: 5px;
+   
+    
+    
+   
+
+}
+
+.mainContent:hover .hoverDiv{
+    transform: translateY(-316px) ;
+    
+}
+.mainContent .hoverDiv #btnn{
+    padding: 0 5px;
+    width: fit-content !important;
+}
+.mainContent .hoverDiv p  {
+    text-align: left;
+}
+#btnn a {
+    text-decoration: none;
+    color: #003049 !important;
+    
+}
