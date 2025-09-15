@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: "poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+:root {
+    --text-color: #e3e3e3;
+    --subheading-color: #828282;
+    --placeholder-color: #a6a6a6;
+    --secondary-color: #383838;
+    --secondary-hover-color: #444;
+    --primary-color: #242424;
+
+}
+.light_mode{
+    --text-color: #222;
+    --subheading-color: #a0a0a0;
+    --placeholder-color: #6c6c6c;
+    --secondary-color: #e9eef6;
+    --secondary-hover-color: #dbe1ea;
+    --primary-color: #fff;
+
+}
+
+body {
+    background-color: var(--primary-color);
+}
+
+.header,.chat-list .message,
+.typing-form {
+    max-width: 1000px;
+    margin: 0 auto;
+
+}
+
+
+
+.header,
+.typing-area {
+    color: var(--text-color);
+}
+
+.header {
+    /* display: none; */
+    margin-top: 7vh;
+    padding: 1rem;
+}
+body.hide-header .header{
+    margin-top: 7vh;
+    display: none;
+}
+
+.header:where(.title, .subtitle) {
+    font-weight: 500;
+    line-height: 1rem;
+}
+
+.header .title {
+    width: fit-content;
+    font-size: 2.7rem;
+    background-clip: text;
+    background: linear-gradient(to right, #4285f4, #d96570);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header .subtitle {
+    font-size: 2.4rem;
+    color: var(--subheading-color);
+
+}
+
+.suggestion-list {
+    margin-top: 9.5vh;
+    list-style-type: none;
+    display: flex;
+    gap: 1.25rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.suggestion-list .suggestion:hover {
+    background-color: var(--secondary-hover-color);
+}
+
+.suggestion-list .suggestion {
+    padding: 1.25rem;
+    cursor: pointer;
+    flex-shrink: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: column;
+    border-radius: 0.75rem;
+    background-color: var(--secondary-color);
+    width: 200px;
+}
+
+.suggestion-list .suggestion .text {
+    font-weight: 400;
+}
+
+.suggestion-list .suggestion .icon {
+    height: 42px;
+    font-size: 1.5rem;
+    background-color: var(--primary-color);
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 42px;
+}
+
+/*chat list here*/
+.chat-list .message .message-content {
+    margin-top: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+}
+.chat-list{
+    padding: 2rem 1rem 12rem 2rem;
+    max-height: 100vh;
+    overflow-y: auto;
+    scrollbar-color: #999 transparent;
+    /* margin-bottom: 5rem; */
+    /* scrollbar-width: none; */
+}
+.chat-list .message.incoming{
+    margin-top: 1.5rem;
+}
+
+.chat-list .message .text {
+    color: var(--text-color);
+}
+.chat-list .message .text.error{
+    color: #e55865;
+}
+.chat-list .message .icon{
+    color: var(--text-color);
+    height: 35px;
+    width: 35px;
+    background-color: var(--secondary-color);
+    cursor: pointer;
+    margin-left: 3.5rem;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    visibility: hidden;
+    
+}
+.chat-list .message .icon:hover{
+    background-color: var(--secondary-hover-color);
+}
+.chat-list .message:not(.loading):hover .icon:not(.hide){
+    visibility: visible;
+}
+
+.chat-list .message .avtar {
+    width: 42px;
+    border-radius: 50%;
+    align-self: flex-start;
+}
+.chat-list .message-content
+
+/*tying css is here*/
+.typing-area ,#typing {
+    position: fixed !important;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--primary-color);
+
+
+}
+
+.typing-area :where(.typing-form, .action-button) {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.typing-area .input-wrapper {
+    position: relative;
+    height: 56px;
+    width: 100%;
+    display: flex;
+}
+
+.typing-area .typing-input {
+    width: 100%;
+    height: 100%;
+    background: var(--secondary-color);
+    border: none;
+    outline: none;
+    border-radius: 6.2rem;
+    font-size: 1rem;
+    color: var(--text-color);
+    padding: 1.1rem 4rem 1.1rem 1.5rem;
+
+
+}
+
+.typing-area .icon {
+    background-color: var(--secondary-color);
+    height: 56px;
+    width: 56px;
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+
+}
+
+.typing-area .input-wrapper .icon {
+    position: absolute;
+    cursor: pointer;
+    right: 0;
+    outline: none;
+    border: none;
+    color: var(--text-color);
+    background: none;
+    transform: scale(0);
+}
+
+.typing-area .input-wrapper .typing-input:valid~.icon {
+    transform: scale(1);
+}
+
+.typing-area .typing-input::placeholder {
+    color: var(--placeholder-color);
+}
+
+.typing-area .typing-input:focus {
+    background: var(--secondary-hover-color);
+}
+
+.typing-area .disclaimier-text {
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    text-align: center;
+    color: var(--placeholder-color);
+
+}
+/*loading bar css here*/
+.chat-list .message.loading .text{
+    display: none;
+}
+.chat-list .message.loading .avtar{
+    animation: rotate 3s linear infinite;
+}
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.chat-list .loading-indicator{
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.chat-list .message.loading .loading-indicator{
+    display: flex;
+}
+.chat-list .loading-indicator .loading-bars{
+    height: 11px;
+    border-radius: 0.14rem;
+    width: 100%;
+    background:linear-gradient(to right,#4285f4,var(--primary-color),#4285f4);
+    animation: animate 3s linear infinite;
+}
+.chat-list .loading-indicator .loading-bars:last-child{
+    width: 70%;
+}
+@keyframes animate {
+    0%{
+        background-position: -800px 0;
+        
+    }
+    100%{
+        background-position: 800px 0;
+
+    }
+}
+
+
+@media (max-width:768px)  {
+    .header :is(.title,.subtitle){
+        font-size: 2rem;
+        line-height: 2.6rem;
+    }
+    .header .subtittle{
+        font-size: 1.7rem;
+    }
+    .chat-list .message .avtar{
+        width: 37px;
+        height: 37px;
+
+    }
+    .typing-area :where(.typing-form,.action-button){
+        gap:0.4rem
+
+    }
+    .typing-form .input-wrapper{
+        height: 50px;
+
+    }
+    .typing-form .typing-input{
+        padding: 1.1rem 3.5rem 1.1rem 1.2rem;
+
+    }
+    .typing-area .disclaimier-text{
+        font-size: 0.75rem;
+        margin-top: 0.5rem;
+    }
+}
